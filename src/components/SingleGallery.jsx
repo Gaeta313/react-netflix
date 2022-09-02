@@ -3,6 +3,7 @@ import { Alert, Container } from "react-bootstrap";
 import Carousel from "better-react-carousel";
 import SpinnerComponent from "./SpinnerComponent";
 
+
 class SingleGallery extends Component {
   state = {
     data: null,
@@ -37,7 +38,7 @@ class SingleGallery extends Component {
         {this.state.data && !this.state.loading && !this.state.error && (
           <Carousel cols={6} rows={1} gap={10} loop scrollSnap>
             {this.state.data.map((film) => (
-              <Carousel.Item key={film.imdbId}>
+              <Carousel.Item className="effetto" key={film.imdbId}>
                 <img
                   className="img-fluid h-100"
                   src={film.Poster}
@@ -53,3 +54,5 @@ class SingleGallery extends Component {
 }
 
 export default SingleGallery;
+
+
