@@ -43,8 +43,12 @@
   background-color: #221f1f;
 } */
 
-*{
-  color:white !important
+#nav-dropdown-dark-example{
+  color: white;
+}
+
+div.container-fluid:nth-child(2) > nav:nth-child(1) > a:nth-child(1){
+  color: white;
 }
 
 body {

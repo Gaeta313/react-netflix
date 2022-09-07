@@ -1,8 +1,12 @@
-import { Component } from "react";
-import { Container, Navbar, Nav }  from "react-bootstrap";
 
-class MyNav extends Component {
-  render() {
+import { Container, Navbar, Nav }  from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
+
+const MyNav = () => {
+
+  const location = useLocation()
+  console.log(location)
+
     return (
       
         <Navbar
@@ -20,11 +24,11 @@ class MyNav extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Tv Shows</Nav.Link>
-              <Nav.Link href="#link">Movies</Nav.Link>
-              <Nav.Link href="#link">Recently Added</Nav.Link>
-              <Nav.Link href="#link">My List</Nav.Link>
+              <Link className={location.pathname === "/" ? "nav-link active" : "nav-link" } to="/">Home</Link> 
+              <Link className={location.pathname === "/tvShow"? "nav-link active" : "nav-link"} to="/tvShow"> Tv Shows</Link> 
+              <Link className="nav-link" to="/movies">Movies</Link> 
+              <Link className="nav-link" to="/recently">Recently Added</Link> 
+              <Link className="nav-link" to="/myList">My List</Link>
             </Nav>
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
@@ -39,7 +43,6 @@ class MyNav extends Component {
         </Navbar>
      
     );
-  }
 }
 
 export default MyNav;
