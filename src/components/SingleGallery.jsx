@@ -35,7 +35,7 @@ const SingleGallery = (props) => {
     const funzione = async () => {
       try {
         let response = await fetch(
-          "http://www.omdbapi.com/?apikey=2652acf5&page=2&s=" +
+          "https://www.omdbapi.com/?apikey=2652acf5&page=2&s=" +
             props.segment
         );
         if (response.ok) {
