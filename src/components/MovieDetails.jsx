@@ -13,7 +13,7 @@ const MovieDetails = (props) => {
     const funzione = async () => {
       try {
         let response = await fetch(
-          "http://www.omdbapi.com/?apikey=2652acf5&i=" + params.id
+          "https://www.omdbapi.com/?apikey=2652acf5&i=" + params.id
         );
         if (response.ok) {
           let data = await response.json();
