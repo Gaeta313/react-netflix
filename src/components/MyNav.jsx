@@ -9,7 +9,7 @@ const MyNav = () => {
 
     return (
       
-        <Navbar
+        <Navbar expand="md"
           className="navbar navbar-expand-md navbar-dark"
           style={{ backgroundColor: "#21f1f" }}
         >

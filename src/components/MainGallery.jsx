@@ -9,7 +9,7 @@ class MainGallery extends Component {
             <Container fluid>
                  <SingleGallery title={"Che la forza sia con te !"}  segment="star%20wars" />
                  <SingleGallery title={"Tolkien Saga"}  segment="lord%20rings" />
-                 <SingleGallery title={"Serata da Incubo"}  segment="nightmare" />
+                 <SingleGallery title={"Harry Potter"}  segment="harry%20potter" />
             </Container>
            
             

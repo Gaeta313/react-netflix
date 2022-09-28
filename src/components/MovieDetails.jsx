@@ -43,8 +43,8 @@ const MovieDetails = (props) => {
     <Container>
       <Row className="justify-content-center">
         {
-            movie &&<Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={movie.Poster} />
+            movie &&<Card className="w-50 m-auto" >
+          <div className="w-50 m-auto"><Card.Img variant="top" src={movie.Poster} /></div>
           <Card.Body>
             <Card.Title>{movie.Title}</Card.Title>
             <Card.Text>
